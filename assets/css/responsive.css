@@ -1,0 +1,96 @@
+/* Small devices (landscape phones, 530px and up) */
+@media (min-width: 576px) {
+  p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 3.75em;
+    line-height: 1.5;
+  }
+
+  .departments .departments-content .department-imgs li {
+    width: calc(100% / 4 - 9px);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .departments .departments-content .department-main .post-content ul li {
+    width: 50%;
+  }
+
+  .appointment .appointment-right,
+  .appointment .appointment-left {
+    height: 700px;
+  }
+
+  .appointment .appointment-left {
+    padding: 100px 40px 100px 40px;
+  }
+
+  .appointment .appointment-right {
+    padding: 100px 40px 100px 40px;
+  }
+
+  .sponsor {
+    padding: 60px 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .departments .departments-content .department-imgs li {
+    width: calc(100% / 5 - 9px);
+  }
+
+
+
+
+  .footer .footer-top .doctor-info,
+  .footer .footer-top .time-info {
+    margin-left: 45px;
+  }
+
+  .padding-tb {
+    padding: 120px 0;
+  }
+
+  .appointment .appointment-right,
+  .appointment .appointment-left {
+    height: 700px;
+  }
+
+  .appointment .appointment-left {
+    padding: 100px 40px 100px 100px;
+  }
+
+  .appointment .appointment-right {
+    padding: 100px 100px 100px 40px;
+  }
+
+  .news .news-header {
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  .news .news-header .news-title h2 {
+    margin-bottom: 0;
+  }
+
+  .news .news-input {
+    width: 60%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .departments .departments-content .department-imgs li {
+    width: calc(100% / 9 - 9px);
+  }
+}

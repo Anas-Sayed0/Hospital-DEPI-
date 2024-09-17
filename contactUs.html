@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <!-- ------------- Google link for Roboto font  ------------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------------- Font Awesome styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- ------------- Bootstrap styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- ------------- Main styleseet for ContactUs page ------------->
+    <link rel="stylesheet" href="./assets/css/contactUs.css" />
+    <!-- ------------- General styleseet for all pages------------->
+    <link rel="stylesheet" href="./assets/css/general.css" />
+
+    <!-- ------------- Map API link  ------------->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ---------------------- Header Section ---------------------- -->
+    <!-- !!!!!!!!!!!!!
+      Couldnt wrapp the Navbars into Header element because the sticky-top navbar will stop working 
+          !!!!!!!!!!!!-->
+
+    <!-- First Navigation Bar -->
+    <nav class="navbar bg-white py-3 px-5 mobile">
+      <div class="container">
+        <!-- Logo -->
+        <a href="./home.html">
+          <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+        </a>
+
+        <!-- Contact Info for large screens -->
+        <div class="contact-nav-info d-none d-lg-flex gap-4">
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon1.png" alt="Phone Icon" />
+            <div>
+              <p class="m-0">Number:</p>
+              <p class="m-0 fw-bold">+880123456789</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon2.png" alt="Email Icon" />
+            <div>
+              <p class="m-0">Email:</p>
+              <p class="m-0 fw-bold">Mukti@gmail.com</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon3.png" alt="Address Icon" />
+            <div>
+              <p class="m-0">Address:</p>
+              <p class="m-0 fw-bold">12 North West New York 100</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          id="sidebarToggle"
+          title="Toggle Sidebar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar for Mobile View -->
+    <div id="sidebar" class="sidebar d-lg-none">
+      <ul class="list-unstyled">
+        <li><a href="./home.html" class="link-light">Home</a></li>
+        <li>
+          <a href="./department.html" class="link-light">Departments</a>
+        </li>
+        <li><a href="./doctors.html" class="link-light">Doctors</a></li>
+        <li><a href="./services.html" class="link-light">Services</a></li>
+        <li><a href="./blog.html" class="link-light">Blog</a></li>
+        <li><a href="./about-us.html" class="link-light">About Us</a></li>
+        <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Second Navigation Bar for large screens -->
+    <nav class="bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+      <div class="container">
+        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+          <li><a href="./home.html" class="link-light">Home</a></li>
+          <li>
+            <a href="./department.html" class="link-light">Departments</a>
+          </li>
+          <li><a href="./doctors.html" class="link-light">Doctors</a></li>
+          <li><a href="./services.html" class="link-light">Services</a></li>
+          <li><a href="./blog.html" class="link-light">Blog</a></li>
+          <li><a href="./about-us.html" class="link-light">About Us</a></li>
+          <li>
+            <a href="./contactUs.html" class="link-light">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ---------------------- Hero Section ---------------------- -->
+    <section class="hero-section text-center py-5">
+      <h1>Contact Information</h1>
+      <p><strong>Home-</strong>Contact Us</p>
+    </section>
+
+    <!-- ---------------------- Contact Info Section ---------------------- -->
+    <section class="contact-container container my-5">
+      <div class="row">
+        <div class="contact-info col-12 col-md-6">
+          <h2>Contact Information</h2>
+
+          <div class="contact-item">
+            <p>
+              <strong>Office Address:</strong><br />
+              Suite 02, Level 12, Sahera Tropical Center 218<br />
+              New Elephant Road, Dhaka - 1205
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <p>
+              <strong>Phone Number:</strong><br />
+              +8801678170593, 01919-264687<br />
+              02-9611936
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <p>
+              <strong>Email Address:</strong><br />
+              support@LabArtisan
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <p>
+              <strong>Website Address:</strong><br />
+              http://LabArtisan
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------------------- Contact Form Section ---------------------- -->
+        <div class="contact-form col-12 col-md-6">
+          <h2>We Love To Hear From You</h2>
+          <form id="contactForm">
+            <div class="mb-3">
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                placeholder="Phone Number"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                id="subject"
+                class="form-control"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                id="message"
+                class="form-control"
+                placeholder="Write a message..."
+                rows="5"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              Send Message »
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------- Map Section ---------------------- -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div id="map" class="my-map"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------- Footer Section ---------------------- -->
+    <footer
+      class="w-100 d-flex flex-column justify-content-center align-items-center pt-5"
+    >
+      <div class="w-75 row g-3">
+        <div
+          class="footer-content-1 col-xl-3 col-lg-12 text-center text-xl-start"
+        >
+          <h4 class="fw-bold pb-2">Contact Info</h4>
+
+          <p>
+            Rapidiously seize wireless strategic theme areas and corporate
+            testing procedures. Uniquely
+          </p>
+          <p>
+            <i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02
+            New Elephant Road USA
+          </p>
+          <p>
+            <i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123,
+            02-96936
+          </p>
+          <p class="fw-semibold">
+            <i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com
+          </p>
+          <p class="fw-semibold">
+            <i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com
+          </p>
+        </div>
+
+        <div
+          class="footer-content-2 col-xl-6 col-lg-12 d-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <img src="assets/images/logo.png" alt="Logo" class="logo" />
+          </div>
+
+          <p class="text-center pt-3">
+            Proactive predominate empowered portals viaine robust infrastructurs
+            Convenen simp scalable ntatves rather thanineri manetic action items
+            Proactively predominate empowered portals robust
+          </p>
+
+          <h4 class="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text"
+              ><i class="fa-solid fa-paper-plane fa-xs color"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control border-opacity-10"
+              placeholder="Enter Your Email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+
+            <button
+              class="btn btn-primary fw-bold px-4 py-3"
+              type="button"
+              id="button-addon2"
+            >
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-content-3 col-xl-3 col-lg-12">
+          <h4 class="fw-bold pb-3 text-center text-xl-start">Opening Hours</h4>
+
+          <div class="d-flex justify-content-between">
+            <div>
+              <p>Saturday</p>
+              <p>Sunday</p>
+              <p>Monday</p>
+              <p>Tuesday</p>
+              <p>Wednesday</p>
+              <p>Thursday</p>
+            </div>
+
+            <div class="text-end">
+              <p>8:00 am - 10:00 pm</p>
+              <p>6:00 am - 8:00 pm</p>
+              <p>6:00 am - 2:00 pm</p>
+              <p>7:00 am - 9:00 pm</p>
+              <p>10:00 am - 12:00 pm</p>
+              <p>2:00 am - 6:00 pm</p>
+            </div>
+          </div>
+        </div>
+        <hr class="w-100 text-light-emphasis mt-5" />
+      </div>
+
+      <p>
+        Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights
+        Reserved. By <span class="fw-bold">LabArtisan</span>
+      </p>
+    </footer>
+    <!-- --------------- Font Awesome script file --------------- -->
+    <script src="./assets/js/all.min.js"></script>
+    <!-- --------------- Bootstrap script file --------------- -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- -- General script file for all pages -- -->
+    <script src="./assets/js/script.js"></script>
+    <!-- -- script file for contactUs page -- -->
+    <script src="./assets/js/contactUs.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+/* ------------------------------- GENERAL ------------------------------- */
+/* color-primary: #0071ef; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Navbar */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #0071ef;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .contact-nav-info {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar>.container {
+    flex-wrap: nowrap !important;
+  }
+
+}

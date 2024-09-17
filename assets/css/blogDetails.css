@@ -1,0 +1,82 @@
+.title-img {
+  height: 170px;
+  width: 100%;
+}
+
+.centered-blue {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0071ef;
+  font-size: 20px;
+}
+
+.centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 40% !important;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+.card-body{
+  font-size: 20px;
+}
+.card iframe{
+    height: 15rem;
+}
+
+.card-blue-text {
+  color: #0071ef;
+  font-style: bold;
+  margin-bottom: 0;
+}
+
+.input-group button {
+  font-size: 14px;
+}
+
+.input-group .input-group-text {
+  background-color: transparent;
+  border-right: 0;
+}
+
+.form-control {
+  border-left: 0;
+}
+
+footer {
+  background-image: url("../images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.bg-color {
+  background-color: #0071ef;
+}
+
+.hero {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  color: #0071ef;
+  min-height: 40vh;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero p {
+  color: #000;
+}
