@@ -5,7 +5,7 @@ import './Blogs.css';
 import blog1 from "../../../assets/images/blog1.jpg";
 import blog2 from "../../../assets/images/blog2.jpg";
 import backgroundImg from "../../../assets/images/background.jpg";
-import Footer from '../../shared/Footer';
+import Footer from './../../shared/Footer/Footer';
 
 const blogs = [
   { id: 1, imgSrc: blog1 },

@@ -1,29 +1,20 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../../assets/images/logo.png";
-import {
-  faHouseChimney,
-  faPhone,
-  faEnvelope,
-  faGlobe,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+import logo from "./../../../assets/images/logo.png";
+import { faHouseChimney, faPhone, faEnvelope, faGlobe, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className="w-100 d-flex flex-column justify-content-center align-items-center pt-5">
-      <div className="w-75 row g-3">
-        <div className="footer-content-1 col-xl-3 col-lg-12 text-center text-xl-start">
+    <footer className="w-100 d-flex flex-column justify-content-center align-items-center pt-5 px-5">
+      <div className="row container-fluid justify-content-around">
+        <div className="col-xl-3 col-12 text-center text-xl-start">
           <h4 className="fw-bold pb-2">Contact Info</h4>
           <p>
-            Rapidiously seize wireless strategic theme areas and corporate
-            testing procedures. Uniquely
+            Rapidiously seize wireless strategic theme areas and corporate testing procedures. Uniquely
           </p>
           <p>
-            <FontAwesomeIcon
-              icon={faHouseChimney}
-              className="pe-2 text-primary"
-            />
+            <FontAwesomeIcon icon={faHouseChimney} className="pe-2 text-primary" />
             Suite 02 New Elephant Road USA
           </p>
           <p>
@@ -39,29 +30,27 @@ const Footer = () => {
             info@mukti.com
           </p>
         </div>
-        <div className="footer-content-2 col-xl-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
+        <div className="col-xl-5 col-12 d-flex flex-column justify-content-center align-items-center text-center">
           <div>
             <img src={logo} alt="Logo" className="logo" />
           </div>
           <p className="text-center pt-3">
-            Proactive predominate empowered portals viaine robust infrastructurs
-            Convenen simp scalable ntatves rather thanineri manetic action items
-            Proactively predominate empowered portals robust
+            Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust
           </p>
           <h4 className="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
           <div className="input-group mb-3">
-            <span className="input-group-text">
+            <span className={`${styles.inputText} input-group-text`}>
               <FontAwesomeIcon icon={faPaperPlane} className="text-primary" />
             </span>
             <input
               type="text"
-              className="form-control border-opacity-10"
+              className={`${styles.border} form-control border-opacity-10`}
               placeholder="Enter Your Email"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
             />
             <button
-              className="btn btn-primary fw-bold px-4 py-3"
+              className={`${styles.subscribe} btn btn-primary fw-bold px-4 py-3`}
               type="button"
               id="button-addon2"
             >
@@ -69,10 +58,8 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="footer-content-3 col-xl-3 col-lg-12">
-          <h4 className="fw-bold pb-3 text-center text-xl-start">
-            Opening Hours
-          </h4>
+        <div className="col-xl-3 col-12 text-center text-lg-start">
+          <h4 className="fw-bold pb-3 text-center text-xl-start">Opening Hours</h4>
           <div className="d-flex justify-content-between">
             <div>
               <p>Saturday</p>
@@ -95,8 +82,7 @@ const Footer = () => {
         <hr className="w-100 text-light-emphasis mt-5" />
       </div>
       <p>
-        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All
-        Rights Reserved. By{" "}
+        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All Rights Reserved. By{" "}
         <span className="fw-bold text-black">LabArtisan</span>
       </p>
     </footer>

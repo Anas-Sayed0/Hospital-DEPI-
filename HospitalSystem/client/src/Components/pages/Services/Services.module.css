@@ -1,15 +1,14 @@
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
+.carouselButton{
     background-color: #0071ef;
     border-radius: 50%;
 }
 
-.image img{
+.serviceImg{
     width: 500px;
     height: 320px;
     object-fit: cover;
 }
 
-.service-details{
+.serviceDesc{
     width: 480px;
 }

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './BlogDetails.css';
 import backgroundImg from "../../../assets/images/background.jpg";
-import Footer from '../../shared/Footer';
+import Footer from './../../shared/Footer/Footer';
 
 const BlogDetails = () => {
   const location = useLocation();

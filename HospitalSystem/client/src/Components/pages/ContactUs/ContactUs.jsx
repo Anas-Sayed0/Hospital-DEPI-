@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection/HeroSection";
 import ContactInfo from "./ContactSection/ContactInfo";
 import ContactForm from "./ContactSection/ContactForm";
 import MapSection from "./MapSection/MapSection";
-import Footer from "../../shared/Footer";
+import Footer from "./../../shared/Footer/Footer";
 import "./ContactUs.css";
 
 const ContactUs = () => {

@@ -1,4 +1,4 @@
-import Footer from "../../shared/Footer";
+import Footer from "./../../shared/Footer/Footer";
 import Hero from "./Hero/Hero";
 import Services from "./Services/Services";
 
