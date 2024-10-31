@@ -6,7 +6,7 @@ const heroSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    minlength: 5,
+    minlength: 3,
     maxlength: 225,
   },
   desc: {
@@ -28,7 +28,7 @@ const Hero = mongoose.model("Hero", heroSchema);
 /**************************************************************************************************/
 function handleHeroValidation(hero) {
   const schema = Joi.object({
-    header: Joi.string().min(5).required(),
+    header: Joi.string().min(3).required(),
     desc: Joi.string().min(15).required(),
     coloredDesc: Joi.string(),
   });

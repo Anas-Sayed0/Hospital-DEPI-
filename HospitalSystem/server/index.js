@@ -13,6 +13,7 @@ const doctors = require("./routes/doctors");
 const { Doctor } = require("./models/doctors");
 const services = require("./routes/services");
 const { Service } = require("./models/services");
+const aboutUs = require("./routes/aboutUs");
 const contactRoute = require("./routes/contact");
 const { Contact } = require("./models/contact");
 const users = require("./routes/users");
@@ -60,6 +61,7 @@ app.use("/api/doctors", doctors);
 app.use("/api/departments", departments);
 app.use("/api/services", services);
 app.use("/api/contact", contactRoute);
+app.use("/api/aboutUs", aboutUs);
 app.use("/api/login", auth);
 app.use("/api/register", users);
 
