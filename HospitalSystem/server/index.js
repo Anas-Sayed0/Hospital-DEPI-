@@ -17,6 +17,8 @@ const aboutUs = require("./routes/aboutUs");
 const contactRoute = require("./routes/contact");
 const { Contact } = require("./models/contact");
 const users = require("./routes/users");
+const appointmentsRouter = require("./routes/home/appointment");
+const { Appointment } = require("./models/home/appointment");
 const auth = require("./routes/auth");
 const authMiddleware = require("./middlewares/auth");
 const cookieParser = require("cookie-parser");
@@ -62,6 +64,7 @@ app.use("/api/departments", departments);
 app.use("/api/services", services);
 app.use("/api/contact", contactRoute);
 app.use("/api/aboutUs", aboutUs);
+app.use("/api/appointments", appointmentsRouter);
 app.use("/api/login", auth);
 app.use("/api/register", users);
 
@@ -90,7 +93,7 @@ app.get("/login", (req, res) => {
 });
 
 //home route
-app.get("/home", (req, res) => {
+app.get("/home", authMiddleware, (req, res) => {
   res.render("home");
 });
 
@@ -221,6 +224,79 @@ app.get("/contacts", authMiddleware, async (req, res) => {
     console.error("Error fetching contact messages:", error); // Log the error
     res.status(500).send("Error fetching contact messages");
   }
+});
+
+// Serve the appointments page
+app.get("/appointments", authMiddleware, async (req, res) => {
+  try {
+    const appointments = await Appointment.find().sort("datePicker");
+    res.render("appointments", { appointments });
+  } catch (error) {
+    console.error("Error fetching appointments:", error); // Log the error
+    res.status(500).send("Error fetching appointments data");
+  }
+});
+
+app.get("/appointments/:id/edit", authMiddleware, async (req, res) => {
+  try {
+    const appointment = await Appointment.findById(req.params.id);
+    if (!appointment) return res.status(404).send("Appointment not found");
+
+    res.render("edit_appointment", { appointment, errors: [] });
+  } catch (error) {
+    console.error("Error fetching appointment data:", error);
+    res.status(500).send("Error fetching appointment data");
+  }
+});
+
+// Handle the edit appointment form submission
+app.post("/appointments/:id/edit", authMiddleware, async (req, res) => {
+  try {
+    const {
+      Appointment,
+      handleAppointmentValidation,
+    } = require("./models/home/appointment");
+
+    // Validate the request body
+    const { error } = handleAppointmentValidation(req.body);
+    if (error) {
+      const errorMessages = error.details.map((err) => err.message);
+      const appointment = await Appointment.findById(req.params.id);
+      return res
+        .status(400)
+        .render("edit_appointment", { appointment, errors: errorMessages });
+    }
+
+    // Find and update the appointment
+    const updatedAppointment = await Appointment.findByIdAndUpdate(
+      req.params.id,
+      {
+        name: req.body.name,
+        department: req.body.department,
+        phoneNumber: req.body.phoneNumber,
+        datePicker: req.body.datePicker,
+      },
+      { new: true }
+    );
+
+    if (!updatedAppointment)
+      return res.status(404).send("Appointment not found");
+
+    res.redirect("/appointments");
+  } catch (error) {
+    console.error("Error updating appointment:", error);
+    res.status(500).send("Error updating appointment");
+  }
+});
+
+// Logout Route
+app.post("/logout", authMiddleware, (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
+  });
+  res.redirect("/login"); // Redirect to the login page after logout
 });
 
 // Environment Variables:

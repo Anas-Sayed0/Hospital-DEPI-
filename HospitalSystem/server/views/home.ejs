@@ -73,6 +73,11 @@
       >
         <div class="container-fluid">
           <h3>Hospital Admin Dashboard</h3>
+          <form action="/logout" method="POST" class="d-flex">
+            <button type="submit" class="btn btn-danger">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </form>
         </div>
       </nav>
 
@@ -210,11 +215,25 @@
                       </span>
                       Contact Management
                     </h5>
-                    <p class="card-text">
-                      Manage contactUs forms
-                    </p>
+                    <p class="card-text">Manage contactUs forms</p>
                     <a href="/contacts" class="btn btn-danger">
-                      <i class="fas fa-arrow-right"></i> Go to Services
+                      <i class="fas fa-arrow-right"></i> Go to Contacts
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="card management-card">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center">
+                      <span class="icon-wrapper bg-warning">
+                        <i class="fas fa-cogs text-white"></i>
+                      </span>
+                      Appointments Management
+                    </h5>
+                    <p class="card-text">Manage appointments forms</p>
+                    <a href="/appointments" class="btn btn-warning">
+                      <i class="fas fa-arrow-right"></i> Go to appointments
                     </a>
                   </div>
                 </div>
